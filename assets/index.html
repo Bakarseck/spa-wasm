@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container-header">
+      <div class="header">
+        <div id="logo">
+          <img src="icon2.png" alt="logo" />
+          <h2 id="titre">StackOverClash</h2>
+          <div class="search">
+            <i class="fa-solid fa-magnifying-glass fa-2xs"></i>
+            <input id="search" type="search" placeholder="search something" />
+          </div>
+        </div>
+        <div id="button">
+          <button id="login"><a href="/login">Login</a></button>
+          <button id="mode"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden h-5 w-5 dark:block"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg></button>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <nav>
+        <ul>
+          <a href="/">Home</a>
+          <p>PUBLIC</p>
+          <a href="/new">New</a>
+          <a href="/popular">Popular</a>
+          <a href="/vote">Infinite vote</a>
+        </ul>
+      </nav>
+      <main class="clash-container">
+        <div class="hd">
+          <div id="clash-title">
+           
+          </div>
+
+          <div id="create-clash">
+            <a href="/create">Create clash</a>
+          </div>
+        </div>
+        <div id="clash">
+           
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="wasm_exec.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+
+

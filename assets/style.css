@@ -1,0 +1,288 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: hsl(20 14.3% 4.1%);
+    color: azure;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+
+#titre {
+    font-size:1.3em;
+}
+
+#titre2 {
+    font-size: 2em;
+    margin-top: 0;
+}
+
+h2 {
+    font-weight: 700;
+}
+
+
+/*  ------------- Header ----------- */
+.header div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+.container-header {
+    border-bottom: 1px solid ;
+    border-color: hsl(12 6.5% 15.1%);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: hsl(20 14.3% 4.1%);
+}
+
+.header {
+    background-color: hsl(20 14.3% 4.1%); 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto 17em;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;  
+}
+
+#button {
+    justify-self: end;
+}
+
+#search {
+    height: 35px;
+    background-color: hsl(20 14.3% 4.1%);
+    color: azure;
+    border: none;
+    outline: none;
+}
+#search::-webkit-search-cancel-button,
+#search::-webkit-search-clear-button {
+    display: none;
+}
+
+.search {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border: 1px solid ;
+    border-color: hsl(12 6.5% 15.1%);
+    
+}
+
+.search:hover {
+    outline: 2px solid #ea580c;
+}
+
+button {
+    border: none;
+    color: azure;
+}
+
+#login {
+    height: 2.7em;
+    width: 4.5em;
+    background-color: #ea580c;
+}
+
+
+#mode {
+    height: 2.7em;
+    width: 4.5em;
+    background-color: hsl(20 14.3% 4.1%);
+}
+
+/* ------------ Container -------------*/
+
+.container {
+    padding-top: 4em;
+    display: flex;
+    margin: auto 25em;
+    height: 100vh;
+}
+
+/* ------------ Navigation ------------ */
+
+ul > a {
+    text-decoration: none;
+    color: azure;
+    font-size: 1em;
+    font-weight: 800;
+    height: 1.7em;
+    width: 8em;
+    padding-top: 0.5em;
+    padding-left: 0.5em;
+}
+
+a:focus {
+    background-color: hsl(12 6.5% 15.1%);
+}
+
+nav {
+    border-right: 1px solid ;
+    border-color: hsl(12 6.5% 15.1%);
+    height: 100vh;
+}
+
+nav ul {
+    margin-top: 0%;
+    display: flex;
+    flex-direction: column;
+}
+
+p {
+    font-size: 0.8em;
+    color: #c0bfbc;
+    margin: 2.5% 0%;
+    padding: 0%;
+}
+
+
+/* ------------ Clash container -------------- */
+.hd {
+    width: 90vh;
+    height: 10vh;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    margin: 1em;
+    margin-bottom: 0;
+}
+
+
+#create-clash{
+    height: 2.3em;
+    width: 8.5em;
+    background-color: #ea580c;
+    text-align: center;
+    padding-right: 0.6em;
+    padding-top: 0.8em;
+    margin: 1em;
+    justify-content: center;
+    font-size: 0.8em;
+}
+
+#create-clash > a {
+    text-decoration: none;
+    color: azure;
+    background-color: #ea580c;
+}
+
+
+#clash-label {
+    height: 1.5em;
+    border-radius: 15px;
+    background-color: #ea580c;
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+/* ----------- Clash blocs ------------- */
+
+.clash-created {
+    width: 85vh;
+    height: 20vh;
+    margin: 1em;
+    border: 1px solid ;
+    border-color: hsl(12 6.5% 15.1%);
+    padding-left: 1em;
+    padding-right: 1em;
+
+}
+
+.clash-created:hover {
+    background-color: hsl(12 6.5% 15.1%);
+}
+
+.progression-bar {
+    display: block;
+    width: 85vh;
+    height: 3vh;
+    display: flex; 
+}
+
+#progress {
+    color: azure;
+    font-size: 0.9em;
+    font-weight: 700;
+    font-style: bold;
+    text-shadow: 0px 0px 4px hsl(0 0% 100%) / 0.8;
+    animation: fadeIn 5s ease-in-out;
+}
+
+.techno-clash {
+    display: flex;
+    justify-content: space-between;
+}
+
+.techno-clash > p {
+    margin:0.5em 0;
+}
+
+.progress-bar {
+    height: 100%;
+}
+
+.progression-bar > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.progress-bar1 {
+    width: 70%;
+    background-color: #4CAF50;
+    transform: scaleX(0);
+    transform-origin: left center;
+    animation: 3s progress ease-out forwards;
+}
+
+.progress-bar2 {
+    width: 30%;
+    transform: scaleX(0);
+    transform-origin: right center;
+    background-color: #2196F3;
+    animation: 2s progress ease-out forwards;
+}
+
+
+@keyframes progress {
+    to{
+      transform: scaleX(1);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+      visibility: hidden;
+      opacity: 0;
+    }
+    100% {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  .stats {
+    padding: 1em 0;
+    display: inline-flex;
+    gap:0.7em
+  }
+
+  .stats > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    text-align: center;
+    background-color: hsl(12 6.5% 15.1%);
+    padding: 0.2em 1em;
+    border-radius: 15px;
+    font-size: 0.7em;
+  }
+
+
+

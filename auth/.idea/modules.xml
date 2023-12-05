@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/auth.iml" filepath="$PROJECT_DIR$/.idea/auth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../real-time-forum/communication/.idea/communication.iml" filepath="$PROJECT_DIR$/../../real-time-forum/communication/.idea/communication.iml" />
+      <module fileurl="file://$USER_HOME$/exam/.idea/exam.iml" filepath="$USER_HOME$/exam/.idea/exam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../frontend/.idea/frontend.iml" filepath="$PROJECT_DIR$/../frontend/.idea/frontend.iml" />
+    </modules>
+  </component>
+</project>
