@@ -48,7 +48,6 @@ func main() {
 
 		login := js.Global().Get("document").Call("querySelector", "#loginUsername").Get("value").String()
 		password := js.Global().Get("document").Call("querySelector", "#loginPassword").Get("value").String()
-
 		data := map[string]string{
 			"login":    login,
 			"password": password,
@@ -59,19 +58,23 @@ func main() {
 			fmt.Println(err.Error())
 		}
 
-		resp, err := http.Post("http://localhost:8083/login", "application/json", bytes.NewBuffer(jsonData))
-		if err != nil {
-			fmt.Println(err.Error())
-		}
-		defer resp.Body.Close()
+		go func() {
+			// Effectuer la requête HTTP POST avec les données du formulaire
+			resp, err := http.Post("http://localhost:8083/login", "application/x-www-form-urlencoded", bytes.NewBuffer(jsonData))
+			if err != nil {
+				fmt.Println(err.Error())
+				return
+			}
+			defer resp.Body.Close()
 
-		content, err := io.ReadAll(resp.Body)
+			content, err := io.ReadAll(resp.Body)
+			if err != nil {
+				fmt.Println(err.Error())
+				return
+			}
 
-		if err != nil {
-			fmt.Println(err.Error())
-		}
-
-		fmt.Println(string(content))
+			fmt.Println(string(content))
+		}()
 
 		return nil
 	}))

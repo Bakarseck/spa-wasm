@@ -1,0 +1,7 @@
+POST http://localhost:8083/register
+
+{
+    "username": "bakseck",
+    "email": "seck@gmail.com",
+    "password": "seck"
+}

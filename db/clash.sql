@@ -5,7 +5,7 @@ DROP TABLE IF EXISTS vote;
 DROP TABLE IF EXISTS comments_clashs;
 
 -- Table user
-CREATE TABLE IF NOT EXISTS user (
+CREATE TABLE IF NOT EXISTS users (
   id INTEGER PRIMARY KEY,
   username TEXT,
   email TEXT,

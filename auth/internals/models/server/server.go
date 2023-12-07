@@ -34,6 +34,14 @@ func (s *Server) ConfigureRoutes() {
 
 func (s *Server) handleRequest(path string, handler http.HandlerFunc, method string) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Access-Control-Allow-Origin", "*")
+		w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
+		w.Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS, GET")
+
+		if r.Method == "OPTIONS" {
+			w.WriteHeader(http.StatusOK)
+			return
+		}
 		if path == r.URL.Path {
 			if r.Method == method {
 				handler(w, r)
@@ -54,12 +62,11 @@ func (s *Server) StartServer(port string) error {
 	s.ConfigureRoutes()
 	database, err := utils.OpenDatabase()
 	if err != nil {
-
+		fmt.Println(err.Error())
 	}
 	app := models.App{}
 	app.Database = database
 	app.SessionHandler = models.CreateSessionManager()
-	fmt.Println(port, "rrr")
 	fmt.Printf("http://localhost:%v", port)
 	return http.ListenAndServe(":"+port, s.Router)
 }

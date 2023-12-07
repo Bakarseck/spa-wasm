@@ -14,6 +14,7 @@ var GlobalSessionManager = models.App{
 }
 
 func HandleLogin(w http.ResponseWriter, r *http.Request) {
+	
 
 	rsp, err := io.ReadAll(r.Body)
 	if err != nil {
@@ -43,6 +44,7 @@ func HandleLogin(w http.ResponseWriter, r *http.Request) {
 	}
 
 	GlobalSessionManager.OpenSession(w, userFromDb)
+
 
 	data := map[string]interface{}{
 		"message": "User logged in successfully",
